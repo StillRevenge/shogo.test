@@ -22,4 +22,14 @@ class HomeController
 
         return 'Hello World';
     }
+    public function viewTable()
+    {
+        $pdo = PdoFactory::get();
+        $stmt = $pdo->query('SELECT * FROM product_view');
+        while ($row = $stmt->fetch()) {
+            echo '<pre>';
+            print_r($row);
+            echo '</pre>';
+        }
+    }
 }

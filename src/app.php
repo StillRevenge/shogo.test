@@ -16,6 +16,7 @@ $routes = [
     Route::createGet('/catalog', [$catalogController, 'index']),
     Route::createGet('/catalog/', [$catalogController, 'getCat']),
     Route::createGet('/product/', [$productController, 'index']),
+    Route::createGet('/view', [$homeController, 'viewTable'])
 ];
 
 
